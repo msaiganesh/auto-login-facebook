@@ -12,3 +12,4 @@ def fb_login():
     login=browser.find_element_by_css_selector('#u_0_l')
     login.click()
 fb_login()
+#print("yogendra")
