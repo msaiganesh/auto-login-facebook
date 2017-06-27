@@ -12,6 +12,33 @@ def fb_login():
     login=browser.find_element_by_css_selector('#u_0_l')
     login.click()
 fb_login()'''
+driver = self.driver
+    driver.get("https://www.facebook.com/")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("mailid@email.com")
+    driver.find_element_by_id("pass").clear()
+    driver.find_element_by_id("pass").send_keys("password")
+    driver.find_element_by_id("u_0_4").click()
+
+    #i wanted to post multiple times.. but it doesn't work even once
+    for i in range(1,11):
+        driver.get("https://www.facebook.com/<username>")
+        el=driver.find_element_by_id("u_0_1r")#post field
+        el.clear()
+        print i
+        el.click()
+        el.clear()
+        el.send_keys(Keys.RETURN)
+        time.sleep(1)
+        el.click()
+        #assume fwords is a list of words
+        el.send_keys('test output: '+random.choice(fwords))
+        el.click()
+        el.click()
+        time.sleep(2)
+        driver.find_element_by_id("u_0_1m").click()
+        driver.find_element_by_xpath("//form[@id='u_0_1l']/div/div[4]/div/ul/li[2]/label/input").click()
+        time.sleep(8
 
 
 from selenium import webdriver
